@@ -1,0 +1,12 @@
+03 10
+playground work
+there are ~833 groups of dialogues with the same first utterance
+only the last trigger is in the ds -> data augmentation?
+
+03 11
+definitive data exploration experiments
+there can be up to 8 speakers per episode
+train test split prepared for multiple seeds
+dummyClassifier are not sequence models: we flatten the sequences (with strange ideas)
+custom f1 metrics
+baseline models
