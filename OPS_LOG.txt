@@ -10,3 +10,7 @@ train test split prepared for multiple seeds
 dummyClassifier are not sequence models: we flatten the sequences (with strange ideas)
 custom f1 metrics
 baseline models
+
+03 16 LP
+Defined BERT model (both with full and freezed parameters) --> ongoing
+Defined an *attempt* at training method --> ongoing
