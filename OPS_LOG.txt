@@ -19,9 +19,10 @@ Defined an *attempt* at training method --> ongoing
 Analyzed Class imbalances: weights could be beneficial,
 there's a strong Class imbalance.
 
-Defined combined loss function: There's to bettere understand which 2 loss
+Defined combined loss function: There's to better understand which 2 loss
 functions are better, and which is the best way to combine them.
-For the triggers a BCE is the obvious choice,
+We could decide to penalize one of the 2 loss.
+For the triggers a BCE is the obvious choice.
 While a standard Cross Entropy could be the better one for emotions.
 We could also use Sparse Cross Entropy, if we don't want to Hot Encode the Labels
 
