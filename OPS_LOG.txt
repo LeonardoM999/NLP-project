@@ -30,3 +30,10 @@ We could also use Sparse Cross Entropy, if we don't want to Hot Encode the Label
 Defined Bert model
 Defined Tokenization function (to revise)
 Defined training function (to be tested)
+
+03 17 all 3
+tokenization function 
+Trainer API tests: subclassed Trainer to reimplement compute_loss for 2 outputs
+also used standard Trainer class
+Datasets/Dataloaders
+we need to do the traditional training loop
