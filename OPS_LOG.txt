@@ -14,3 +14,18 @@ baseline models
 03 16 LP
 Defined BERT model (both with full and freezed parameters) --> ongoing
 Defined an *attempt* at training method --> ongoing
+
+03 17 GDM
+Analyzed Class imbalances: weights could be beneficial,
+there's a strong Class imbalance.
+
+Defined combined loss function: There's to bettere understand which 2 loss
+functions are better, and which is the best way to combine them.
+For the triggers a BCE is the obvious choice,
+While a standard Cross Entropy could be the better one for emotions.
+We could also use Sparse Cross Entropy, if we don't want to Hot Encode the Labels
+
+
+Defined Bert model
+Defined Tokenization function (to revise)
+Defined training function (to be tested)
