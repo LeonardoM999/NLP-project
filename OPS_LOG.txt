@@ -37,3 +37,8 @@ Trainer API tests: subclassed Trainer to reimplement compute_loss for 2 outputs
 also used standard Trainer class
 Datasets/Dataloaders
 we need to do the traditional training loop
+
+03 23
+flattening a Series of lists: nester fors still is the fastest, tried grouping by list lenght
+dropped column SPEAKERS from the beginning and not in the tokenization
+one hot encoding of emotions (with all the sequences and variable batch size!)
