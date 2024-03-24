@@ -38,7 +38,23 @@ also used standard Trainer class
 Datasets/Dataloaders
 we need to do the traditional training loop
 
-03 23
+03 23 LM
 flattening a Series of lists: nester fors still is the fastest, tried grouping by list lenght
 dropped column SPEAKERS from the beginning and not in the tokenization
 one hot encoding of emotions (with all the sequences and variable batch size!)
+
+03 23 LP
+experiments on Trainer
+
+03 24 all 3
+experiments on the shapes of the input tensors (input_ids...) they are wrong and training loop/Trainer do not work
+we want tensors of shape (batch_size, utterance_len) but we have (batch_size, episode_len, utterance_len) 
+using tokenizer flag is_split_into_words merges the utterances but it does not change the shape of the tensors
+we get shape (batch_size, 1, n*utterance_len)
+so we need to consider 1 utterance at a time, we do it by explodi the dataset: (1 row per utterance)
+ but we do not want to loose context!
+we want to provide inputs of the type (target=u1, before=u0, after=u2) to have context:
+ [CLS u1 SEP u0 SEP u2] or [u0 CLS u1 SEP u2] (same family)
+ or [CLS u0 SEP u1 SEP u2] (CLS is for all the utterances)
+we have to preprocess the exploded dataset so to have target, before, after in each row
+careful when splitting in train/eval/test not to split a dialogue
