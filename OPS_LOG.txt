@@ -58,3 +58,7 @@ we want to provide inputs of the type (target=u1, before=u0, after=u2) to have c
  or [CLS u0 SEP u1 SEP u2] (CLS is for all the utterances)
 we have to preprocess the exploded dataset so to have target, before, after in each row
 careful when splitting in train/eval/test not to split a dialogue
+
+afternoon:
+correctly eploded the dataframe, making sure that the previous utterance of the first utterance of each episode and 
+the next utterance of the last utterance are both empty
