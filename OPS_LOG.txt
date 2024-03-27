@@ -62,3 +62,15 @@ careful when splitting in train/eval/test not to split a dialogue
 afternoon:
 correctly eploded the dataframe, making sure that the previous utterance of the first utterance of each episode and 
 the next utterance of the last utterance are both empty
+
+03 27 LM
+train/test/val split is done withing the preprocessing section because it's easier and cleaner
+context window: instead of having only 1 prev + 1 next utterance per row we can have as many as we want
+column labels are next_1, next_2, next_3... previous_1, previous_2...
+created function explode_add_context, called on each of train_df, test_df, val_df
+metrics: made new from scratch to fit the new data model. To copmute f1 inside each episode we pass a dataframe 
+that contains also the column "episode" as y_true, y_pred is a np array.
+The baseline models become trivial: extending the sklearn class is redundant
+Column "episode" changed from utterance_xyz to episode_xyz to save my mental health
+
+
