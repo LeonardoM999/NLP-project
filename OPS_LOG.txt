@@ -73,4 +73,9 @@ that contains also the column "episode" as y_true, y_pred is a np array.
 The baseline models become trivial: extending the sklearn class is redundant
 Column "episode" changed from utterance_xyz to episode_xyz to save my mental health
 
+03 28 all 3
+tokeniztion function (Still maybe does not work) done by tokenizing 1 big string that includes prev_1, curr, next_1...
+(instead of a list of strings)
+big string = "CLS prev_-1 SEP curr SEP next_1"
+tried to run the model but there is 1 too many dimension of the inputs
 
