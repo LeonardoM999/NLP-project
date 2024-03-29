@@ -79,3 +79,16 @@ tokeniztion function (Still maybe does not work) done by tokenizing 1 big string
 big string = "CLS prev_-1 SEP curr SEP next_1"
 tried to run the model but there is 1 too many dimension of the inputs
 
+03 29 L G
+there were many troubles with shapes, somehow we managed them but it was still probably wrong
+BUT: the tokenizer was tokenizing only the first 2 utterances from a list
+this is because BERT can take max 2 SEP tokens because of how it was trained
+so we cannot make it consider as many utterances as we want (1 + 2 * context_win) but max 2 utterances
+so we decided to give it history+curr and next as 2 sentences. (we can do also other experiments)
+they are strings made from 0+ utterances joined with separator " "
+this is because the triggers are originally given for the second last utterance
+
+later in the evening:
+fixed implementation problems
+
+
