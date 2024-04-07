@@ -91,4 +91,11 @@ this is because the triggers are originally given for the second last utterance
 later in the evening:
 fixed implementation problems
 
+04 06 
+
+04 07
+fixes 
+computed f1 for triggers/emotions
+training runs
+
 
