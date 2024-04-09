@@ -98,4 +98,13 @@ fixes
 computed f1 for triggers/emotions
 training runs
 
+04 09 G
+
+04 09 L
+automatic adaptation to colab or local run: if on colab then run the pip installs 
+and look for the data on the root of the GDrive account
+minor fixes to the tokenize() to avoid column replication
+removed excessive sigmoid from model
+
+
 
