@@ -112,3 +112,5 @@ removed excessive sigmoid from model
 Model tests using an additional linear layer and Relu.
 Learning rate of 5e-7 seems beneficial to the frozen model, at least in the first part of the training.
 Maybe we could try adding a callback to reduce learning rate.
+L 
+ctx_win len from 2 to 4: not very impactful
